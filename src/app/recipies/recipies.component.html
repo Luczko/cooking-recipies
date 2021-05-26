@@ -1,1 +1,1 @@
-<div>{{ categories }}</div>
+<div *ngFor="let item of categories$ | async">{{ item.strCategory }}</div>
