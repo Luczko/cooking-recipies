@@ -1,10 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
-import { Recipies } from '../models/recipies';
 import { RecipeService } from '../services/recipe.service';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { Category } from '../models/category';
+import {
+  catchError,
+  delayWhen,
+  map,
+  retryWhen,
+  shareReplay,
+  tap,
+} from 'rxjs/operators';
 
 @Component({
   selector: 'app-categories',
@@ -12,16 +17,21 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./categories.component.css'],
 })
 export class CategoriesComponent implements OnInit {
-  recipies$: Observable<Recipies[]>;
-  constructor(private http: RecipeService, private route: ActivatedRoute) {}
+  categories$: Observable<Category[]>;
+  constructor(private http: RecipeService) {}
+
+  // showRecipies(): void {
+  //   this.http
+  //     .getCategories()
+  //     .subscribe((data: Category[]) => (this.categories = { ...data }));
+  // }
 
   ngOnInit(): void {
-    const category = this.route.snapshot.paramMap.get('category');
-    const test = this.http.getRecipiesByCategory(category);
+    const test = this.http.getCategories();
 
-    this.recipies$ = test.pipe(
-      tap(console.log),
-      map((e) => e.meals)
+    this.categories$ = test.pipe(
+      //  tap(console.log)
+      map((e) => e.categories)
     );
   }
 }

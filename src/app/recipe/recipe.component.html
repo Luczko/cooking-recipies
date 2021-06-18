@@ -1,0 +1,12 @@
+<div>
+  <mat-card class="recipe-card">
+    <mat-card-header>
+      <!-- <div mat-card-avatar class="recipe-header-image"></div> -->
+      <mat-card-title>{{ singleRecipe?.strMeal }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ singleRecipe?.strMealThumb }}" />
+    <mat-card-content class="recipe-content">
+      <p>{{ singleRecipe?.strInstructions }}</p></mat-card-content
+    >
+  </mat-card>
+</div>

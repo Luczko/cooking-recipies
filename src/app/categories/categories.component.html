@@ -1,3 +1,16 @@
-<div *ngFor="let item of recipies$ | async">
-  <p>{{ item.strMeal }}</p>
+<div>
+  <mat-card
+    class="recipe-card"
+    *ngFor="let item of categories$ | async"
+    [routerLink]="['/category', item.strCategory]"
+  >
+    <mat-card-header>
+      <!-- <div mat-card-avatar class="recipe-header-image"></div> -->
+      <mat-card-title>{{ item.strCategory }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ item.strCategoryThumb }}" />
+    <mat-card-content class="recipe-content">
+      <p>{{ item.strCategoryDescription }}</p></mat-card-content
+    >
+  </mat-card>
 </div>
