@@ -6,6 +6,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { CountriesComponent } from './countries/countries.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'categories', component: CategoriesComponent },
   { path: 'category/:category', component: CategoryComponent },
   { path: 'recipe/:name', component: RecipeComponent },
+  { path: 'countries', component: CountriesComponent },
 ];
 
 @NgModule({

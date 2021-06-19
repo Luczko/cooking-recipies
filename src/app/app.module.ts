@@ -16,9 +16,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatChipsModule } from '@angular/material/chips';
 import { NaviComponent } from './navi/navi.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { CountriesComponent } from './countries/countries.component';
+import { CountryComponent } from './country/country.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,8 @@ import { HomeComponent } from './home/home.component';
     NaviComponent,
     AboutComponent,
     HomeComponent,
+    CountriesComponent,
+    CountryComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +49,7 @@ import { HomeComponent } from './home/home.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

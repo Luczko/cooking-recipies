@@ -18,6 +18,12 @@ export class RecipeService {
     );
   }
 
+  getCountries(): Observable<RecipiesResponse> {
+    return this.http.get<RecipiesResponse>(
+      'https://www.themealdb.com/api/json/v1/1/list.php?a=list'
+    );
+  }
+
   getRecipiesByCategory(category: string): Observable<RecipiesResponse> {
     return this.http.get<RecipiesResponse>(
       'https://www.themealdb.com/api/json/v1/1/filter.php?c=' + category
