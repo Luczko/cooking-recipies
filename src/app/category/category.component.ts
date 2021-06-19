@@ -19,9 +19,6 @@ export class CategoryComponent implements OnInit {
     const category = this.route.snapshot.paramMap.get('category');
     const test = this.http.getRecipiesByCategory(category);
 
-    this.recipies$ = test.pipe(
-      tap(console.log),
-      map((e) => e.meals)
-    );
+    this.recipies$ = test.pipe(map((e) => e.meals));
   }
 }

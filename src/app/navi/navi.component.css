@@ -1,0 +1,12 @@
+.navigation {
+  width: 100%;
+  float: right;
+}
+
+.navi li {
+  list-style: none;
+  float: right;
+  margin: 0 2%;
+  margin-bottom: 17.5px;
+  cursor: pointer;
+}

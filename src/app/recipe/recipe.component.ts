@@ -22,7 +22,7 @@ export class RecipeComponent implements OnInit {
 
     test
       .pipe(
-        tap(console.log),
+        // tap(console.log),
         map((e) => e.meals)
       )
       .subscribe((e: Recipe[]) => (this.singleRecipe = e[0]));

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Category, CategoryResponse } from '../models/category';
-import { Recipies } from '../models/recipies';
+import { Recipies, RecipiesResponse } from '../models/recipies';
 import { map, tap } from 'rxjs/operators';
 import { Recipe } from '../models/recipe';
 
@@ -18,14 +18,14 @@ export class RecipeService {
     );
   }
 
-  getRecipiesByCategory(category: string): Observable<Recipies[]> {
-    return this.http.get<Recipies[]>(
+  getRecipiesByCategory(category: string): Observable<RecipiesResponse> {
+    return this.http.get<RecipiesResponse>(
       'https://www.themealdb.com/api/json/v1/1/filter.php?c=' + category
     );
   }
 
-  getRecipiesByName(name: string): Observable<Recipe[]> {
-    return this.http.get<Recipe[]>(
+  getRecipiesByName(name: string): Observable<RecipiesResponse> {
+    return this.http.get<RecipiesResponse>(
       'https://www.themealdb.com/api/json/v1/1/search.php?s=' + name
     );
   }
