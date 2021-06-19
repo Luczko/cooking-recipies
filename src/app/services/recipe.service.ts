@@ -26,7 +26,7 @@ export class RecipeService {
 
   getRecipiesByCategory(category: string): Observable<RecipiesResponse> {
     return this.http.get<RecipiesResponse>(
-      'https://www.themealdb.com/api/json/v1/1/filter.php?c=' + category
+      'https://www.themealdb.com/api/json/v1/1/filter.php?' + category
     );
   }
 

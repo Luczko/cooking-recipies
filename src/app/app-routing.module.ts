@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'category/:category', component: CategoryComponent },
   { path: 'recipe/:name', component: RecipeComponent },
   { path: 'countries', component: CountriesComponent },
+  { path: 'country/:category', component: CategoryComponent },
 ];
 
 @NgModule({

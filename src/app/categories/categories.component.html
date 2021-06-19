@@ -2,7 +2,7 @@
   <mat-card
     class="recipe-card"
     *ngFor="let item of categories$ | async"
-    [routerLink]="['/category', item.strCategory]"
+    [routerLink]="['/category', 'c=' + item.strCategory]"
   >
     <mat-card-header>
       <!-- <div mat-card-avatar class="recipe-header-image"></div> -->
