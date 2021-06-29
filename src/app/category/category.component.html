@@ -1,11 +1,10 @@
-<div>
+<div class="grid">
   <mat-card
     class="recipe-card"
     *ngFor="let item of recipies$ | async"
     [routerLink]="['/recipe', item.strMeal]"
   >
-    <mat-card-header>
-      <!-- <div mat-card-avatar class="recipe-header-image"></div> -->
+    <mat-card-header class="recipe-header">
       <mat-card-title>{{ item.strMeal }}</mat-card-title>
     </mat-card-header>
     <img mat-card-image src="{{ item.strMealThumb }}" />

@@ -1,17 +1,55 @@
 .recipe-card {
-  width: 22%;
-  height: 510px;
-  margin: 0.5%;
+  width: 90%;
   float: left;
   text-align: center;
   background-color: "";
 }
+
+.recipe-header {
+  cursor: pointer;
+}
+
 .recipe-card img {
   width: 80%;
+  cursor: pointer;
 }
 .recipe-content {
   text-align: justify;
 }
+
+.grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 16px;
+  justify-content: center;
+}
+
+@media (max-width: 1350px) {
+  .grid {
+    grid-template-columns: repeat(3, 300px);
+  }
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media (max-width: 400px) {
+  .recipe-card {
+    width: 80%;
+    margin: 5%;
+    float: none;
+  }
+
+  .grid {
+    display: block;
+    float: none;
+  }
+}
+
 /* 
   .recipe-header-image {
     background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");

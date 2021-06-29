@@ -1,16 +1,27 @@
-<div>
-  <mat-card
-    class="recipe-card"
-    *ngFor="let item of categories$ | async"
-    [routerLink]="['/category', 'c=' + item.strCategory]"
-  >
-    <mat-card-header>
+<div class="grid">
+  <mat-card class="recipe-card" *ngFor="let item of categories$ | async">
+    <mat-card-header class="recipe-header">
       <!-- <div mat-card-avatar class="recipe-header-image"></div> -->
-      <mat-card-title>{{ item.strCategory }}</mat-card-title>
+      <mat-card-title [routerLink]="['/category', 'c=' + item.strCategory]">{{
+        item.strCategory
+      }}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="{{ item.strCategoryThumb }}" />
+    <img
+      [routerLink]="['/category', 'c=' + item.strCategory]"
+      mat-card-image
+      src="{{ item.strCategoryThumb }}"
+    />
     <mat-card-content class="recipe-content">
-      <p>{{ item.strCategoryDescription }}</p></mat-card-content
+      <p *ngIf="!length">
+        {{
+          (item.strCategoryDescription | slice: 0:70) +
+            (item.strCategoryDescription.length > 70 ? "..." : "")
+        }}
+      </p>
+      <p *ngIf="length">
+        {{ item.strCategoryDescription }}
+      </p>
+      <span (click)="changeLength()">read more</span></mat-card-content
     >
   </mat-card>
 </div>

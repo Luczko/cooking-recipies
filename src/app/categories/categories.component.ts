@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { Observable } from 'rxjs';
 import { RecipeService } from '../services/recipe.service';
 import { Category } from '../models/category';
@@ -18,6 +18,7 @@ import {
 })
 export class CategoriesComponent implements OnInit {
   categories$: Observable<Category[]>;
+  length = false;
   constructor(private http: RecipeService) {}
 
   // showRecipies(): void {
@@ -25,6 +26,10 @@ export class CategoriesComponent implements OnInit {
   //     .getCategories()
   //     .subscribe((data: Category[]) => (this.categories = { ...data }));
   // }
+
+  changeLength(): void {
+    this.length = !this.length;
+  }
 
   ngOnInit(): void {
     const test = this.http.getCategories();
