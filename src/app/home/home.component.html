@@ -1,14 +1,39 @@
-<p>home works!</p>
-<mat-form-field class="search-bar">
-  <input
-    matInput
-    placeholder="Type your search"
-    #searchInput
-    autocomplete="off"
-  />
-</mat-form-field>
+<div class="container">
+  <div class="head">
+    <h1>Welcome to cooking recipies!</h1>
+    <p>
+      Place where You can easily find ideas and inspirations for Your dinner
+      from all over the world. You can search by category or country of origin.
+      Or You can just type below what would You like to eat today!
+    </p>
+    <p>
+      This project is still in development. Fell free to check my other projects
+      at github.com/Luczko.
+    </p>
+  </div>
+  <div class="form">
+    <mat-form-field class="form-field">
+      <input
+        matInput
+        placeholder="Type your favourite meal!"
+        #searchInput
+        autocomplete="off"
+        [(ngModel)]="value"
+      />
+      <button
+        *ngIf="value"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="value = ''"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+</div>
 
-<div class="grid" *ngIf="recipies$ | async as recipies">
+<div class="grid" *ngIf="value && (recipies$ | async) as recipies">
   <mat-card
     class="recipe-card"
     *ngFor="let item of recipies"

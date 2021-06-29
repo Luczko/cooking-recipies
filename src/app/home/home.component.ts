@@ -23,6 +23,7 @@ import { RecipeService } from '../services/recipe.service';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   recipies$: Observable<Recipies[]>;
+  value = '';
 
   @ViewChild('searchInput', { static: true }) input: ElementRef;
 

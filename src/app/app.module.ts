@@ -23,6 +23,7 @@ import { HomeComponent } from './home/home.component';
 import { CountriesComponent } from './countries/countries.component';
 import { CountryComponent } from './country/country.component';
 import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { MatInputModule } from '@angular/material/input';
     MatListModule,
     MatChipsModule,
     MatInputModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

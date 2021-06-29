@@ -48,3 +48,34 @@
     float: none;
   }
 }
+
+.container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  float: none;
+}
+
+.head {
+  width: 60%;
+  margin: 2% 20%;
+}
+
+.head h1 {
+  font-size: 30px;
+}
+
+.head p {
+  font-size: 16px;
+}
+
+.form {
+  width: 60%;
+  margin: 2% 20%;
+}
+
+.form-field {
+  width: 300px;
+  display: block;
+  float: none;
+}
