@@ -1,14 +1,31 @@
 .recipe-card {
-  width: 22%;
-  height: 510px;
-  margin: 0.5%;
+  width: 90%;
   float: left;
   text-align: center;
+  justify-content: center;
   background-color: "";
 }
+.recipe-header {
+  cursor: pointer;
+  justify-content: center;
+  height: 65px;
+}
+
 .recipe-card img {
   width: 80%;
+  cursor: pointer;
 }
-.recipe-content {
-  text-align: justify;
+
+.grid {
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+  }
 }
