@@ -1,5 +1,7 @@
 # Cooking - Page full of recipies!
 
+https://luczko.github.io/cooking-recipies/
+
 Projekt front-endowy strony z przepisami kulinarnymi.
 Setki przepisów z całego świata - wybierz na co masz ochotę!
 
@@ -12,8 +14,9 @@ Przepisy można wyszukiwać poprzez
 
 - wybranie kategorii z zakładki 'Categories'
 - wybranie państwa z zakładki 'Countries'
+- wpisanie nazwy w wyszukiwarce na stronie główniej
 - wpisanie składnika z zakładki 'Ingrediens' (w trakcie tworzenia)
-- wpisanie nazwy w wyszukiwarce na stronie główniej (w trakcie tworzenia)
+- wpisanie nazwy w wyszukiwarce na stronie główniej
 - wpisanie kategorii w wyszukiwarce na stronie główniej (w trakcie tworzenia)
 - wpisanie państwa w wyszukiwarce na stronie główniej (w trakcie tworzenia)
 - wpisanie składnika w wyszukiwarce na stronie główniej (w trakcie tworzenia)
@@ -22,8 +25,8 @@ You can search for recipe by:
 
 - selecting category on tab 'Categories'
 - selecting country on tab 'Countries'
+- typing recipe name in search field on home page
 - selecting an ingredient on tab 'Ingrediens' (under construction)
-- typing recipe name in search field on home page (under construction)
 - typing category name in search field on home page (under construction)
 - typing country name in search field on home page (under construction)
 - typing an ingredient name in search field on home page (under construction)
@@ -31,6 +34,9 @@ You can search for recipe by:
 ## API
 
 Strona oparta o darmowe API: https://www.themealdb.com/api.php
+
+\
+
 Project based on free API: https://www.themealdb.com/api.php
 
 ## Development info
