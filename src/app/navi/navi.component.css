@@ -3,6 +3,12 @@
   float: right;
 }
 
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+}
+
 .navi li {
   list-style: none;
   float: right;
@@ -13,4 +19,15 @@
 
 .active {
   color: red;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    float: right;
+    display: block;
+  }
 }

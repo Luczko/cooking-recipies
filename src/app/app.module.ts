@@ -24,6 +24,7 @@ import { CountriesComponent } from './countries/countries.component';
 import { CountryComponent } from './country/country.component';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { FormsModule } from '@angular/forms';
     MatChipsModule,
     MatInputModule,
     FormsModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

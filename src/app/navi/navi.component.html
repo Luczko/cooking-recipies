@@ -6,3 +6,26 @@
     <li routerLink="/home" routerLinkActive="active">Home</li>
   </ul>
 </div>
+<div class="mobile">
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <span routerLink="/home" routerLinkActive="active">Home</span>
+    </button>
+    <button mat-menu-item>
+      <span routerLink="/categories" routerLinkActive="active">Categories</span>
+    </button>
+    <button mat-menu-item>
+      <span routerLink="/countries" routerLinkActive="active">Countries</span>
+    </button>
+    <button mat-menu-item>
+      <span routerLink="/about" routerLinkActive="active">About</span>
+    </button>
+  </mat-menu>
+</div>
